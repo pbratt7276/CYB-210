@@ -15,8 +15,6 @@ smstraight = True
 lgstraight = True
 yahtzee = True
 chance = True
-categories_boolean = [ones, twos, threes, fours, fives, sixes, toak, foak, fullhouse, smstraight,
-                      lgstraight, yahtzee, chance]
 categories_names = ['Ones', 'Twos', 'Threes', 'Fours', 'Fives', 'Sixes', 'Toak', 'Foak', 'Fullhouse', 'Smstraight',
                     'Lgstraight', 'Yahtzee', 'Chance']
 
